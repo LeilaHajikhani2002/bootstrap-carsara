@@ -1,6 +1,7 @@
 :root{
     --primary-color:#EC620C;
     --secondary-color:#ffffff;
+    --navy-color:#090E2380;
     --dark-navy-color:#090E23;
     --light-navy-color:#141B34;
 }
@@ -93,10 +94,15 @@ body{
 .btn-gradient{
     background:linear-gradient(#F66B15,#D0540F);
     color: white;
+    white-space: nowrap;
 }
 .btn-gradient:hover{
     background:linear-gradient(#FF2B00,#FF2B00);
     color: white;
+    transition-duration: 0.5s;
+}
+.bg-primary-color{
+    background-color:var(--primary-color);
 }
 
 /* start nav */
@@ -106,6 +112,7 @@ body{
 }
 .main-nav a:hover{
     color: white;
+    transition-duration: 0.5s;
 }
 .main-nav a:not(.btn):hover::after{
     content:"";
@@ -116,7 +123,6 @@ body{
     bottom: -4px;
     right: 0;
 }
-
 .divider{
     border-left: 1px dashed white;
     height: 30px;
@@ -129,7 +135,6 @@ body{
     z-index: -1;
     opacity: 0.5;
 }
-
 @media (max-width: 576px) {
     .img-over-left{
         width: 300px;
@@ -143,5 +148,216 @@ body{
     opacity: 0.5;
 
 }
-
 /* end header */
+
+/* start service*/
+.card-service{
+   border-radius: 60px;
+    cursor: pointer;
+    height: 100%;
+}
+.service-icon-box{
+    width: 80px;
+    height: 80px;
+    top: 0;
+    left: 0;
+}
+.service-icon-box span{
+    width: 70%;
+    height: 70%;
+    transform: rotate(-45deg);
+}
+.card-service:hover .service-icon-box span{
+    color: var(--primary-color)!important;
+    border: 1px solid var(--primary-color)!important;
+    transition-duration: 0.5s;
+
+}
+/* end service*/
+
+/* start new cars*/
+.card-new-cars{
+    margin-top: 100px;
+    cursor: pointer;
+}
+.card-new-cars:hover .icon-box-footer span{
+    border-color: var(--primary-color)!important;
+    color: var(--primary-color)!important;
+    transition-duration: 0.5s;
+}
+.card-new-cars:hover .body-new-cars,
+.card-new-cars:hover .footer-new-cars{
+    border-right: 3px solid var(--primary-color)!important;
+    transition-duration: 0.5s;
+}
+.header-new-cars{
+    border-right: 3px solid var(--primary-color);
+}
+.header-new-cars img{
+    margin-top: -15px;
+}
+.body-new-cars{
+   border-radius: 50px 50px 0 50px;
+    padding-top: 70px !important;
+    border-right: 3px solid transparent;
+}
+.new-cars-list svg{
+    color: #858E96;
+}
+.footer-new-cars{
+   border-radius:50px 0 50px 50px ;
+    border-right: 3px solid transparent;
+}
+.icon-box-footer{
+    width: 62px;
+    height: 62px;
+}
+.icon-box-footer span{
+    width: 70%;
+    height: 70%;
+    transform: rotate(-45deg);
+}
+/* end new cars*/
+
+/* start pricing*/
+.pricing-box{
+    background-color:var(--navy-color);
+    border-radius: 40px;
+}
+.pricing-img-over{
+    filter: blur(10px);
+    opacity: 0.5;
+}
+.pricing-container{
+    padding: 5px;
+    border-radius: 40px;
+    background: linear-gradient(150deg,transparent 80%, var(--primary-color));
+    cursor: pointer;
+    backdrop-filter: opacity(0);
+
+}
+.pricing-box::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 350px;
+    right: -180px;
+    top: 60px;
+    z-index: -1;
+    background: radial-gradient(38.19% 28.33% at 50% 50%, #ED630D 0%, #733112 48.44%, #141B34 92.1%);
+    transform: rotate(-33.88deg);
+    opacity: 0.7;
+}
+.pricing-container:hover h5{
+    color: var(--primary-color);
+    transition-duration: 0.5s;
+}
+.pricing-container:hover .pricing-img-over{
+    filter: blur(0px);
+    opacity: 0.7;
+    transition-duration: 0.5s;
+}
+.pricing-container:hover .pricing-box::after {
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+@media (max-width: 575.98px) {
+    .pricing-box::after {
+        right: -250px;
+        top: 150px;
+    }
+
+    .pricing-img-over {
+        bottom: 60px !important;
+    }
+}
+/* end pricing*/
+
+/* start brands*/
+.brand-item{
+    border-radius: 25px;
+    min-width: 120px;
+    min-height: 120px;
+    max-width: 120px;
+    max-height: 120px;
+    cursor: pointer;
+}
+.brand-item img{
+    filter: grayscale(100%) brightness(50%);
+}
+.brand-item.active{
+    min-width: 140px;
+    min-height: 140px;
+    max-width: 140px;
+    max-height: 140px;
+    background: linear-gradient(180deg, #0E142C 24.44%, #542E25 89.88%);
+    border: 1px solid var(--primary-color);
+}
+.brand-item span{
+    color: white!important;
+}
+.brand-item.active img{
+    filter: grayscale(0%) brightness(100%);
+}
+.brand-item:hover span{
+    color: white;
+    transition-duration: 0.5s;
+}
+.brand-item:hover img{
+    filter: grayscale(0%) brightness(100%);
+    transition-duration: 0.5s;
+}
+/* width */
+.brand-items::-webkit-scrollbar {
+    height: 5px;
+}
+
+/* Track */
+.brand-items::-webkit-scrollbar-track {
+    background: var(--light-navy-color);
+    height: 5px;
+}
+
+/* Handle */
+.brand-items::-webkit-scrollbar-thumb {
+    background: #b9b9b9;
+}
+/* end brands*/
+
+
+/* start comment*/
+.member-img-box{
+    width: 80px;
+    height: 80px;
+}
+.member-img-box img {
+    border-color: var(--dark-navy-color) !important;
+    top: -2px;
+    left: -2px;
+}
+.comment-slider .carousel-inner:hover .member-name{
+    color: var(--primary-color)!important;
+    transition-duration: 0.5s;
+}
+.carousel-control-custom{
+    width: 55px;
+    height: 55px;
+}
+
+/* end brands*/
+
+/* start footer*/
+.footer-img-box{
+   background: linear-gradient(transparent,var(--primary-color));
+    height: 60px;
+    width: 250px;
+    margin-top: -50px;
+}
+.footer-img-box>div{
+    top: -2px;
+}
+.footer-icons a:hover path{
+    fill: var(--primary-color)!important;
+    transition-duration: 0.5s;
+}
+/* end footer*/
