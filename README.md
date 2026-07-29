@@ -2,3 +2,38 @@
 Check out the live version of the project here:  
 https://leilahajikhani2002.github.io/bootstrap-carsara/
 
+# Template Project
+
+This is a frontend template project built using HTML, SCSS, Bootstrap npm libraries.
+
+---
+
+## 🚀 Features
+
+- Responsive layout
+- Image sliders using bootstrap(carousel component)
+
+---
+
+## 📦 Libraries Used (npm)
+
+- bootstrap
+
+---
+
+## 📁 Project Structure
+
+- css/ → compiled CSS files  
+- html/ → HTML pages  
+- images/ → image assets  
+- node_modules/ → installed dependencies
+
+---
+
+## ⚙️ Installation
+
+After cloning the project, run:
+
+`bash
+npm install
+
