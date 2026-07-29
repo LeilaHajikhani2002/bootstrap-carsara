@@ -18,6 +18,7 @@ This is a frontend template project built using HTML, SCSS, Bootstrap npm librar
 ## 📦 Libraries Used (npm)
 
 - bootstrap
+- bootstrap-icons
 
 ---
 
