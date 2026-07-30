@@ -104,6 +104,9 @@ body{
 .bg-primary-color{
     background-color:var(--primary-color);
 }
+.x-small{
+    font-size: 14px;
+}
 
 /* start nav */
 .main-nav a{
