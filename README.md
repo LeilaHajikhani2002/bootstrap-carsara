@@ -4,7 +4,7 @@ https://leilahajikhani2002.github.io/bootstrap-carsara/
 
 # Template Project
 
-This is a frontend template project built using HTML, SCSS, Bootstrap npm libraries.
+This is a frontend template project built using HTML, CSS, Bootstrap npm libraries.
 
 ---
 
